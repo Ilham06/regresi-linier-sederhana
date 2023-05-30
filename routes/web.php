@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [DataController::class, 'index'])->name('home');
+Route::post('/store', [DataController::class, 'store'])->name('data.store');
+Route::delete('/{id}', [DataController::class, 'destroy'])->name('data.destroy');
+Route::post('/calculate', [DataController::class, 'calculate'])->name('data.calculate');
