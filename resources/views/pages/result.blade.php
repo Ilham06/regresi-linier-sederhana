@@ -56,7 +56,7 @@
                     <p> = {{ $result }}</p>
                     <hr>
                     <p>
-                        Jadi, nilai prediksi nilai Y jika nilai X nya {{ $X }} adalah {{ $result }}.
+                        Jadi, prediksi nilai Y jika nilai X nya {{ $X }} adalah {{ $result }}.
                     </p>
                 </div>
             </div>
